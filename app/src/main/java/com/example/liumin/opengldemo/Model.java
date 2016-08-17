@@ -23,9 +23,9 @@ public class Model {
     float minZ;
 
     public Point getCentrePoint(){
-        float cx=minX + (maxX - minX)/ 2;
-        float cy=minY + (maxY - minY)/ 2;
-        float cz=minZ + (maxZ - minZ)/ 2;
+        float cx= (maxX - minX)/ 2;
+        float cy= (maxY - minY)/ 2;
+        float cz= (maxZ - minZ)/ 2;
         return new Point(cx, cy, cz);
     }
 
@@ -60,12 +60,13 @@ public class Model {
         vertBuffer=Util.floatToBuffer(verts);
     }
 
+    public float[] getVnorms() {
+        return vnorms;
+    }
+
     public void setVnorms(float[] vnorms){
         this.vnorms=vnorms;
         vnormsBuffer=Util.floatToBuffer(vnorms);
-    }
-    public float[] getVnorms() {
-        return vnorms;
     }
 
     public short[] getRemarks() {

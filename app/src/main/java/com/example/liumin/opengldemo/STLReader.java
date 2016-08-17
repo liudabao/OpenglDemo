@@ -89,9 +89,9 @@ public class STLReader {
                             model.minX = Math.min(model.minX, x);
                             model.minY = Math.min(model.minY, y);
                             model.minZ = Math.min(model.minZ, z);
-                            model.maxX = Math.min(model.maxX, x);
-                            model.maxY = Math.min(model.maxY, y);
-                            model.maxZ = Math.min(model.maxZ, z);
+                            model.maxX = Math.max(model.maxX, x);
+                            model.maxY = Math.max(model.maxY, y);
+                            model.maxZ = Math.max(model.maxZ, z);
                         }
                     }
                 }

@@ -11,7 +11,7 @@ import java.nio.FloatBuffer;
 public class Util {
 
     public static FloatBuffer floatToBuffer(float[] a) {
-        ByteBuffer bb=ByteBuffer.allocate(a.length*4);
+        ByteBuffer bb=ByteBuffer.allocateDirect(a.length*4);
         bb.order(ByteOrder.nativeOrder());
         FloatBuffer buffer=bb.asFloatBuffer();
         buffer.put(a);
